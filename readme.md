@@ -9,7 +9,7 @@ Requirements:
 
 * PHP 5.4+
 
-(most of them may be ported to earlier versions or work without changes)
+(most of functions may be ported to earlier versions or work without changes)
 
 How to use?
 =
