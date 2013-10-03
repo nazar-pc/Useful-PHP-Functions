@@ -56,6 +56,7 @@ Functions list:
 * post_request ()
 * code_header ()
 * xor_string ()
+* is_md5()
 * is_array_assoc ()
 * is_array_indexed ()
 * array_flip_3d ()
