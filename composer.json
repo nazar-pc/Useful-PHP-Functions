@@ -1,0 +1,24 @@
+{
+	"name"        : "nazar-pc/upf",
+	"version"     : "1.0.0",
+	"description" : "Useful PHP Functions: set of system-independent functions from CleverStyle CMS",
+	"keywords"    : ["functions", "tools", "file system", "string", "text", "array", "xss", "ip", "password", "request"],
+	"homepage"    : "https://github.com/nazar-pc/Useful-PHP-Functions",
+	"license"     : "MIT",
+	"require"     : {
+		"php" : ">=5.4"
+	},
+	"authors"     : [
+		{
+			"name"     : "Nazar Mokrynskyi",
+			"email"    : "nazar@mokrynskyi.com",
+			"homepage" : "http://cleverstyle.org/",
+			"role"     : "Developer"
+		}
+	],
+	"autoload"    : {
+		"files" : [
+			"upf.php"
+		]
+	}
+}

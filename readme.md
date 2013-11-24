@@ -2,19 +2,25 @@ What is this?
 =
 
 This is just set of useful functions which are more or less trivial.
-Most of them was written for CleverStyle CMS, but I hope, they may be useful for others
+Most of them was written for CleverStyle CMS, but I hope, they might be useful for others.
 
 Requirements:
 =
 
 * PHP 5.4+
 
-(most of functions may be ported to earlier versions or work without changes)
-
 How to use?
 =
 
-Include upf.php into your project.
+Include upf.php into your project manually or add dependency on `nazar-pc/upf` to your project's `composer.json`:
+
+```json
+{
+    "require": {
+        "nazar-pc/upf": "*"
+    }
+}
+```
 
 Any docs?
 =
@@ -31,7 +37,7 @@ Functions list:
 * time_limit_pause ()
 * get_files_list ()
 * null_byte_filter ()
-* filter ()
+* prepare_attr_value ()
 * _stripslashes ()
 * _addslashes ()
 * _trim ()
