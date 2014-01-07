@@ -1,6 +1,5 @@
 {
 	"name"        : "nazar-pc/upf",
-	"version"     : "1.1.1",
 	"description" : "Useful PHP Functions: set of system-independent functions from CleverStyle CMS",
 	"keywords"    : ["functions", "tools", "file system", "string", "text", "array", "xss", "ip", "password", "request"],
 	"homepage"    : "https://github.com/nazar-pc/Useful-PHP-Functions",
@@ -20,5 +19,10 @@
 		"files" : [
 			"upf.php"
 		]
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-develop": "1.1-dev"
+		}
 	}
 }
