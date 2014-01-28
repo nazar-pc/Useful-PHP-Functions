@@ -3,7 +3,7 @@
  * @package		CleverStyle CMS
  * @subpackage	UPF (Useful PHP Functions)
  * @author		Nazar Mokrynskyi <nazar@mokrynskyi.com>
- * @copyright	Copyright (c) 2011-2013, Nazar Mokrynskyi
+ * @copyright	Copyright (c) 2011-2014, Nazar Mokrynskyi
  * @license		MIT License, see license.txt
  */
 /**
@@ -666,7 +666,7 @@ function xap ($in, $html = 'text', $iframe = false) {
 	} elseif ($html === false) {
 		return strip_tags($in);
 	} else {
-		return htmlspecialchars($in, ENT_QUOTES | ENT_HTML5 | ENT_DISALLOWED | ENT_SUBSTITUTE);
+		return htmlspecialchars($in, ENT_NOQUOTES | ENT_HTML5 | ENT_DISALLOWED | ENT_SUBSTITUTE | ENT_HTML5);
 	}
 }
 /**
