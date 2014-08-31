@@ -36,6 +36,7 @@ Functions list:
 * \_include_once ()
 * time_limit_pause ()
 * get_files_list ()
+* file_extension ()
 * null_byte_filter ()
 * prepare_attr_value ()
 * \_stripslashes ()
