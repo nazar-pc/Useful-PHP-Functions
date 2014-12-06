@@ -74,6 +74,7 @@ Functions list:
 * is_array_indexed ()
 * array_flip_3d ()
 * truncate ()
+* find_links()
 * path ()
 * keywords ()
 * description ()
