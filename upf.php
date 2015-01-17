@@ -3,7 +3,7 @@
  * @package		CleverStyle CMS
  * @subpackage	UPF (Useful PHP Functions)
  * @author		Nazar Mokrynskyi <nazar@mokrynskyi.com>
- * @copyright	Copyright (c) 2011-2014, Nazar Mokrynskyi
+ * @copyright	Copyright (c) 2011-2015, Nazar Mokrynskyi
  * @license		MIT License, see license.txt
  */
 
@@ -1318,7 +1318,7 @@ function find_links ($text) {
  * @return string
  */
 function path ($text) {
-	$text	= preg_replace('/[\s\(\)\/\\#]+/', '_', $text);
+	$text	= preg_replace('/[\s\(\)\/\\#?]+/', '_', $text);
 	$text	= preg_replace('/_+/', '_', $text);
 	return trim($text, '_');
 }
