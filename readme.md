@@ -79,4 +79,3 @@ Functions list:
 * \_float ()
 * \_string ()
 * \_array ()
-* array_column ()
