@@ -7,7 +7,7 @@ Most of them was written for CleverStyle CMS, but I hope, they might be useful f
 Requirements:
 =
 
-* PHP 5.4+
+* PHP 5.5+
 
 How to use?
 =
