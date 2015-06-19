@@ -37,6 +37,7 @@ Functions list:
 * time_limit_pause ()
 * get_files_list ()
 * file_extension ()
+* file_exists_with_extension()
 * null_byte_filter ()
 * prepare_attr_value ()
 * \_stripslashes ()
@@ -79,3 +80,4 @@ Functions list:
 * \_float ()
 * \_string ()
 * \_array ()
+* random_bytes()
