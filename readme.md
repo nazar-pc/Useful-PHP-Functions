@@ -38,6 +38,7 @@ Functions list:
 * get_files_list ()
 * file_extension ()
 * file_exists_with_extension()
+* rmdir_recursive()
 * null_byte_filter ()
 * prepare_attr_value ()
 * \_stripslashes ()
