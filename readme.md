@@ -60,7 +60,6 @@ Functions list:
 * file_get_json_nocomments()
 * \_preg_match ()
 * \_preg_replace ()
-* xap ()
 * ip2hex ()
 * hex2ip ()
 * password_check ()
