@@ -80,4 +80,3 @@ Functions list:
 * \_float ()
 * \_string ()
 * \_array ()
-* random_bytes()
