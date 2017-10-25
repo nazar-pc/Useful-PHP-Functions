@@ -2,12 +2,12 @@ What is this?
 =
 
 This is just set of useful functions which are more or less trivial.
-Most of them was written for CleverStyle CMS, but I hope, they might be useful for others.
+Most of them was written for CleverStyle Framework, but I hope, they might be useful for others.
 
 Requirements:
 =
 
-* PHP 5.5+
+* PHP 7.0+
 
 How to use?
 =
