@@ -19,9 +19,8 @@ function _require ($file, $once = false, $show_errors = true) {
 	if (file_exists($file)) {
 		if ($once) {
 			return require_once $file;
-		} else {
-			return require $file;
-		}
+		} 
+		return require $file;
 	} elseif (is_bool($show_errors) && $show_errors) {
 		$data = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0];
 		trigger_error("File $file does not exists in $data[file] on line $data[line]", E_USER_ERROR);
@@ -44,9 +43,8 @@ function _include ($file, $once = false, $show_errors = true) {
 	if (file_exists($file)) {
 		if ($once) {
 			return include_once $file;
-		} else {
-			return include $file;
 		}
+		return include $file;
 	} elseif (is_bool($show_errors) && $show_errors) {
 		$data = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0];
 		trigger_error("File $file does not exists in $data[file] on line $data[line]", E_USER_WARNING);
@@ -519,9 +517,8 @@ function _substr ($string, $start, $length = null) {
 	}
 	if ($length) {
 		return substr($string, $start, $length);
-	} else {
-		return substr($string, $start);
 	}
+	return substr($string, $start);
 }
 
 /**
@@ -542,9 +539,8 @@ function _mb_substr ($string, $start, $length = null) {
 	}
 	if ($length) {
 		return mb_substr($string, $start, $length);
-	} else {
-		return mb_substr($string, $start);
 	}
+	return mb_substr($string, $start);
 }
 
 /**
@@ -600,13 +596,14 @@ function _mb_strtolower ($string) {
  * @return string|string[]
  */
 function _mb_strtoupper ($string) {
-	if (is_array($string)) {
-		foreach ($string as &$s) {
-			$s = mb_strtoupper($s, 'utf-8');
-		}
-		return $string;
+	if (!is_array($string)) {
+		return mb_strtoupper($string, 'utf-8');
 	}
-	return mb_strtoupper($string, 'utf-8');
+	
+	foreach ($string as &$s) {
+		$s = mb_strtoupper($s, 'utf-8');
+	}
+	return $string;
 }
 
 /**
@@ -861,9 +858,8 @@ function hex2ip ($hex, $mode = 6) {
 			substr($hex, 28, 4);
 		if ($mode == 10) {
 			return [$result, false];
-		} else {
-			return $result;
-		}
+		} 
+		return $result;
 	}
 }
 
@@ -1160,9 +1156,8 @@ function truncate ($text, $length = 1024, $ending = '...', $exact = false, $cons
 	} else {
 		if (mb_strlen($text) <= $length) {
 			return $text;
-		} else {
-			$truncate = mb_substr($text, 0, $length - mb_strlen($ending));
 		}
+		$truncate = mb_substr($text, 0, $length - mb_strlen($ending));
 	}
 	// if the words shouldn't be cut in the middle...
 	if (!$exact) {
@@ -1327,15 +1322,15 @@ function _float ($in) {
  * @return string|string[]
  */
 function _string ($in) {
-	if (is_array($in)) {
-		return array_map(
-			function ($in) {
-				return (string)$in;
-			},
-			$in
-		);
+	if (!is_array($in)) {
+		return (string)$in;
 	}
-	return (string)$in;
+	return array_map(
+		function ($in) {
+			return (string)$in;
+		},
+		$in
+	);
 }
 
 /**
@@ -1346,13 +1341,13 @@ function _string ($in) {
  * @return array|array[]
  */
 function _array ($in) {
-	if (is_array($in)) {
-		return array_map(
-			function ($in) {
-				return (array)$in;
-			},
-			$in
-		);
+	if (!is_array($in)) {
+		return (array)$in;
 	}
-	return (array)$in;
+	return array_map(
+		function ($in) {
+			return (array)$in;
+		},
+		$in
+	);
 }
